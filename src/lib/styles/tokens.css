@@ -1,0 +1,194 @@
+/*
+ * Wortel design tokens — Tuinen De Ridder.
+ * Source of truth: design_system.md §2. Use the semantic token, never the raw hex.
+ */
+:root {
+	/* ---------- primitives: Forest */
+	--forest-50: #eef5ee;
+	--forest-100: #d6e8d5;
+	--forest-200: #b0d1ae;
+	--forest-300: #84b582;
+	--forest-400: #5b9858;
+	--forest-500: #3f7d3d;
+	--forest-600: #2f6530;
+	--forest-700: #255027;
+	--forest-800: #1c3d1f;
+	--forest-900: #132a16;
+
+	/* ---------- primitives: Bark */
+	--bark-50: #f7f1ea;
+	--bark-100: #eadbc8;
+	--bark-200: #d5b996;
+	--bark-300: #bc9466;
+	--bark-400: #a07545;
+	--bark-500: #845d33;
+	--bark-600: #6b4a28;
+	--bark-700: #533a20;
+	--bark-800: #3c2a18;
+	--bark-900: #2a1d11;
+
+	/* ---------- primitives: Linen / Neutral */
+	--linen-25: #fbf9f4;
+	--linen-50: #f5f2ea;
+	--linen-100: #ece7dc;
+	--linen-200: #dad4c7;
+	--neutral-300: #bdb6a7;
+	--neutral-400: #9a9384;
+	--neutral-500: #77716a;
+	--neutral-600: #5c5750;
+	--neutral-700: #45413b;
+	--neutral-800: #2e2b27;
+	--neutral-900: #1c1a17;
+
+	--harvest: #e3a72f;
+	--white: #ffffff;
+
+	/* ---------- semantic */
+	--color-primary: var(--forest-600);
+	--color-primary-hover: var(--forest-700);
+	--color-primary-subtle: var(--forest-50);
+	--color-on-primary: var(--white);
+	--color-secondary: var(--bark-600);
+	--color-secondary-hover: var(--bark-700);
+	--color-secondary-subtle: var(--bark-50);
+	--color-inverse: var(--forest-900);
+	--color-on-inverse: var(--linen-25);
+	--color-on-inverse-muted: #c9d6c6;
+	--color-bg: var(--linen-25);
+	--color-bg-alt: var(--linen-50);
+	--color-surface: var(--white);
+	--color-surface-sunken: var(--linen-100);
+	--color-border: var(--linen-200);
+	--color-border-strong: var(--neutral-500);
+	--color-text: var(--neutral-900);
+	--color-text-muted: var(--neutral-600);
+	--color-text-placeholder: var(--neutral-500);
+	--color-heading: var(--forest-900);
+	--color-link: var(--forest-600);
+	--color-accent: var(--harvest);
+
+	--color-success: #1f7a3a;
+	--color-success-subtle: #e6f2e8;
+	--color-success-text: #1f5f2e;
+	--color-warning: #9a5b00;
+	--color-warning-subtle: #fff4dc;
+	--color-warning-text: #7a4a00;
+	--color-error: #b3261e;
+	--color-error-hover: #8c1d18;
+	--color-error-subtle: #fdecea;
+	--color-error-text: #8c1d18;
+	--color-info: #2563a6;
+	--color-info-subtle: #e8f1fb;
+	--color-info-text: #1d4f84;
+	--color-focus: var(--forest-600);
+
+	/* ---------- typography */
+	--font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+	--font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-accent: 'Fraunces', Georgia, serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+
+	/* fluid 360px → 1440px */
+	--text-display: clamp(2.75rem, 1.92rem + 3.7vw, 5rem);
+	--text-h1: clamp(2.25rem, 1.83rem + 1.85vw, 3.5rem);
+	--text-h2: clamp(1.875rem, 1.58rem + 1.3vw, 2.75rem);
+	--text-h3: clamp(1.5rem, 1.38rem + 0.56vw, 1.875rem);
+	--text-h4: clamp(1.25rem, 1.21rem + 0.19vw, 1.375rem);
+	--text-eyebrow: clamp(0.8125rem, 0.79rem + 0.09vw, 0.875rem);
+	--text-lg: clamp(1.125rem, 1.08rem + 0.19vw, 1.25rem);
+	--text-base: clamp(1rem, 0.98rem + 0.09vw, 1.0625rem);
+	--text-sm: 0.875rem;
+	--text-xs: 0.75rem;
+
+	/* ---------- spacing (4px base) */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.25rem;
+	--space-6: 1.5rem;
+	--space-8: 2rem;
+	--space-10: 2.5rem;
+	--space-12: 3rem;
+	--space-16: 4rem;
+	--space-20: 5rem;
+	--space-24: 6rem;
+	--space-32: 8rem;
+	--section-pad: clamp(4rem, 2.67rem + 5.9vw, 7rem);
+
+	/* ---------- radius */
+	--radius-sm: 6px;
+	--radius-md: 12px;
+	--radius-lg: 20px;
+	--radius-xl: 32px;
+	--radius-pill: 999px;
+
+	/* ---------- elevation (warm-tinted) */
+	--shadow-1: 0 1px 2px rgb(28 26 23 / 0.06);
+	--shadow-2: 0 4px 12px rgb(28 26 23 / 0.08);
+	--shadow-3: 0 12px 32px rgb(28 26 23 / 0.12);
+
+	/* ---------- motion */
+	--ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+	--dur-fast: 150ms;
+	--dur-panel: 250ms;
+	--dur-page: 400ms;
+
+	/* ---------- layout */
+	--container: 1280px;
+	--container-narrow: 800px;
+	--container-wide: 1440px;
+	--gutter: 16px;
+	--header-h: 64px;
+
+	/* ---------- controls (comfortable) */
+	--control-h: 44px;
+	--control-h-sm: 36px;
+	--control-h-lg: 56px;
+	--row-h: 48px;
+}
+
+@media (min-width: 640px) {
+	:root {
+		--gutter: 32px;
+	}
+}
+@media (min-width: 1024px) {
+	:root {
+		--gutter: 48px;
+		--header-h: 80px;
+	}
+}
+
+/* CMS compact density */
+[data-density='compact'] {
+	--control-h: 36px;
+	--row-h: 40px;
+	--text-base: 0.875rem;
+}
+
+/* CMS dark mode only */
+[data-theme='dark'] {
+	--color-bg: #1a1f1b;
+	--color-bg-alt: #1f2520;
+	--color-surface: #222a24;
+	--color-surface-sunken: #2a332c;
+	--color-border: #34403a;
+	--color-border-strong: #6f7d72;
+	--color-text: #e6efe4;
+	--color-text-muted: #b5c2b3;
+	--color-heading: #e6efe4;
+	--color-primary: #84b582;
+	--color-primary-hover: #b0d1ae;
+	--color-primary-subtle: #24362a;
+	--color-on-primary: #132a16;
+	--color-link: #84b582;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		--dur-fast: 0ms;
+		--dur-panel: 0ms;
+		--dur-page: 0ms;
+	}
+}

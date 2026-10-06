@@ -1,0 +1,40 @@
+{
+  "name": "tuinenderidder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:reset": "node scripts/reset-db.js"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.5.4",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@types/node": "^22.10.0",
+    "drizzle-kit": "^0.31.11",
+    "svelte": "^5.57.1",
+    "svelte-check": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^4.0.0"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@fontsource/barlow-condensed": "^5.2.0",
+    "@fontsource/figtree": "^5.2.0",
+    "@fontsource/fraunces": "^5.2.0",
+    "@fontsource/jetbrains-mono": "^5.2.0",
+    "@lucide/svelte": "^1.52.0",
+    "@neondatabase/serverless": "^1.0.0",
+    "drizzle-orm": "^0.45.3",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.5"
+  }
+}
